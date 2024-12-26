@@ -1,7 +1,6 @@
 import { Component, Input, OnInit, ChangeDetectorRef } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgIf } from '@angular/common';
-import { of } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -34,12 +33,6 @@ export class WeatherComponent implements OnInit {
   ngOnInit(): void { }
 
   getWeather(): void {
-    /*const params = {
-      latitude: '22.5626',
-      longitude: '88.363',
-      current_weather: 'true'
-    }; */
-    
     this.inputValidate();
 
     // Clear any previous error message
