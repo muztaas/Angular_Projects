@@ -2,7 +2,6 @@ import { ChangeDetectorRef, Component, input, OnInit  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-//import { FetchDataService } from '../../services/fetch-data.service';
 
 @Component({
   selector: 'app-location',
@@ -18,7 +17,7 @@ export class LocationComponent implements OnInit {
   text: string = 'Get position';
   input_city: string = '';
   city: string = '';
-  errorMsg: string|any = null;
+  errorMsg: string|null = null;
   private URL: string = 'https://api.geoapify.com/v1/geocode/search?text=';
   responseData : any;
   hidden: boolean = true;
